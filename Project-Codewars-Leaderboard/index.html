@@ -1,13 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Codewars leaderboard</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Codewars Leaderboard</title>
+  </head>
+  <body>
+    <h1>Codewars Leaderboard</h1>
 
-<script src="index.mjs" type="module"></script>
+    <form id="user-form">
+      <label for="usernames">Enter usernames</label>
+      <input id="usernames" type="text" required />
+      <button type="submit">Load Leaderboard</button>
+    </form>
+
+    <div id="error-message" role="alert"></div>
+
+    <select id="language-select"></select>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Clan</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body"></tbody>
+    </table>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>

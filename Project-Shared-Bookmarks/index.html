@@ -1,8 +1,47 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-  </body>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shared Bookmarks</title>
+</head>
+
+<body>
+  <h1>Shared Bookmarks</h1>
+
+  <label for="userSelect">Select User</label>
+  <select id="userSelect">
+    <option value="">-- Select a user --</option>
+  </select>
+
+  <!-- Status messages (e.g., “Copied!”, “Bookmark added”) -->
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <section id="bookmarks" aria-label="Bookmarks list"></section>
+
+  <h2>Add Bookmark</h2>
+
+  <form id="bookmarkForm">
+    <div>
+      <label for="url">URL</label>
+      <input id="url" name="url" type="url" required />
+    </div>
+
+    <div>
+      <label for="title">Title</label>
+      <input id="title" name="title" type="text" required />
+    </div>
+
+    <div>
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required></textarea>
+    </div>
+
+    <button type="submit">Add Bookmark</button>
+  </form>
+
+  <script type="module" src="./script.js"></script>
+</body>
+
 </html>
